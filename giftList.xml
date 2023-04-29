@@ -21,8 +21,8 @@
 		<title>Jewel Block Puzzle</title>
 		<detailed>Drag, drop block and win!!</detailed>
 		<icon_imagePath>img/icon_jewelblockpuzzle.webp</icon_imagePath>
-		<packageName>io.md</packageName>
+		<packageName>app.mddotzio.jewelblockpuzzle</packageName>
 		<posterPath>img/poster_jewelblockpuzzle.webp</posterPath>
-		<marketUrl>market://details?id=io.md</marketUrl>
+		<marketUrl>market://details?id=app.mddotzio.jewelblockpuzzle</marketUrl>
 	</gift>
 </giftList>
