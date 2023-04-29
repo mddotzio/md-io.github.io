@@ -12,17 +12,17 @@
 	<gift id="1">
 		<title>Bubble Pop</title>
 		<detailed>Aim and shoot the bubble!</detailed>
-		<icon_imagePath>im/icon/bubbleshoot.png</icon_imagePath>
+		<icon_imagePath>img/icon_bubbleshoot.png</icon_imagePath>
 		<packageName>io.md</packageName>
-		<posterPath>im/poster/bubbleshoot.png</posterPath>
+		<posterPath>img/poster_bubbleshoot.png</posterPath>
 		<marketUrl>market://details?id=io.md</marketUrl>
 	</gift>
 	<gift id="2">
 		<title>Jewel Block Puzzle</title>
 		<detailed>Drag, drop block and win!!</detailed>
-		<icon_imagePath>im/icon/jewelblockpuzzle.png</icon_imagePath>
+		<icon_imagePath>img/icon_jewelblockpuzzle.png</icon_imagePath>
 		<packageName>io.md</packageName>
-		<posterPath>im/poster/jewelblockpuzzle.png</posterPath>
+		<posterPath>img/poster_jewelblockpuzzle.png</posterPath>
 		<marketUrl>market://details?id=io.md</marketUrl>
 	</gift>
 </giftList>
