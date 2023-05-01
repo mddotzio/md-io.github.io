@@ -13,9 +13,9 @@
 		<title>Bubble Pop</title>
 		<detailed>Aim and shoot the bubble!</detailed>
 		<icon_imagePath>img/icon_bubbleshoot.webp</icon_imagePath>
-		<packageName>io.md</packageName>
+		<packageName>app.mddotzio.bubbleshooter.bubblebom</packageName>
 		<posterPath>img/poster_bubbleshoot.webp</posterPath>
-		<marketUrl>market://details?id=io.md</marketUrl>
+		<marketUrl>market://details?id=app.mddotzio.bubbleshooter.bubblebom</marketUrl>
 	</gift>
 	<gift id="2">
 		<title>Jewel Block Puzzle</title>
