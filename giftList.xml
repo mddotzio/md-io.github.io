@@ -25,4 +25,12 @@
 		<posterPath>img/poster_jewelblockpuzzle.webp</posterPath>
 		<marketUrl>market://details?id=app.mddotzio.jewelblockpuzzle</marketUrl>
 	</gift>
+	<gift id="3">
+		<title>Tile Match</title>
+		<detailed>Crush the tile!!</detailed>
+		<icon_imagePath>img/icon_tilematch.webp</icon_imagePath>
+		<packageName>app.mddotzio.tilematch.tileqq</packageName>
+		<posterPath>img/poster_tilematch.webp</posterPath>
+		<marketUrl>market://details?id=app.mddotzio.tilematch.tileqq</marketUrl>
+	</gift>
 </giftList>
