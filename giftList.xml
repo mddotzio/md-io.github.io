@@ -10,11 +10,11 @@
 	<config target="wall" index="0"/>
 
 	<gift id="1">
-		<title>Bubble Pop</title>
+		<title>Bubble Shooter</title>
 		<detailed>Aim and shoot the bubble!</detailed>
-		<icon_imagePath>img/icon_bubbleshoot.webp</icon_imagePath>
+		<icon_imagePath>img/icon_bubbleshooter.webp</icon_imagePath>
 		<packageName>app.mddotzio.bubbleshooter.bubblebom</packageName>
-		<posterPath>img/poster_bubbleshoot.webp</posterPath>
+		<posterPath>img/poster_bubbleshooter.webp</posterPath>
 		<marketUrl>market://details?id=app.mddotzio.bubbleshooter.bubblebom</marketUrl>
 	</gift>
 	<gift id="2">
