@@ -1,1 +1,212 @@
-Site currently under maintenance.
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;600;700&family=Material+Icons+Outlined&display=swap" media="all" />
+
+<link rel="stylesheet" href="/assets/css/style.css" media="all" />
+
+<title data-lang="site_title">MD.IO : Games and Apps Platform for your smart phone</title>
+
+</head>
+
+<body>
+
+<nav id="nav" class="md-navbar">
+
+<div class="fl fl-ca container">
+
+<div class="md-brand"><a href="/" class="fl fl-ca"><i class="mdfonts">MDICON</i></a></div>
+
+<div class="fl fl-ca md-menu">
+
+<ul class="fl fl-ca md-menu-main">
+
+<li><a href="/" class="fl fl-ca"><i class="material-icons-outlined">home</i><span class="teX" data-lang="home">Home</span></a></li>
+
+<li><a href="/#games" class="fl fl-ca __navCatIt" data-catid="games"><i class="material-icons-outlined">gamepad</i><span class="teX" data-lang="games">Games</span></a></li>
+
+<li><a href="/#apps" class="fl fl-ca __navCatIt" data-catid="apps"><i class="material-icons-outlined">apps</i><span class="teX" data-lang="apps">Apps</span></a></li>
+
+</ul>
+
+<div class="fl fl-ca fl-sbj md-menu-right">
+
+<form action="/" method="GET" class="fl fl-ca po re search-form">
+
+<input type="text" name="q" class="input-text" />
+
+<button type="submit"><i class="material-icons-outlined">search</i></button>
+
+<span class="inp-t" data-lang="search">Search</span>
+
+<span class="inp-b"></span>
+
+</form>
+
+<ul class="fl fl-ca menu-widget">
+
+<li><a href="https://play.google.com/store/apps/dev?id=5897026522159457788"><i class="material-icons-outlined">android</i></a></li>
+
+<li class="menu-widget-lang"><a class="fl fl-ca switch-lang" lang="en"><i class="material-icons-outlined">language</i><span class="teX" data-lang="lang_code">EN</span><i class="material-icons-outlined">arrow_drop_down</i></a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<header>
+
+<div class="header-promotion"></div>
+
+<div class="fl fl-ca fl-dco container">
+
+<h1>MD.IO</h1>
+
+<p data-lang="description">Games and Apps Platform for your smart phone</p>
+
+</div>
+
+</header>
+
+<main>
+
+<div class="container">
+
+<section id="sidebar">
+
+<aside class="aside-categories">
+
+</aside>
+
+</section>
+
+</div>
+
+</main>
+
+<footer>
+
+<div class="pages">
+
+<div class="fl container">
+
+<div class="pages-jumb"><p data-lang="description_footer">MD.IO is a Platform who provide you awesome Free Games and Apps.</p></div>
+
+<div class="pages-list">
+
+<div class="pages-item">
+
+<ul class="fl fl-dco __pages-list">
+
+<li><a href="#about" data-lang="about">About</a></li>
+
+<li><a href="#contact" data-lang="contact">Contact</a></li>
+
+<li><a href="#carrer" data-lang="contact">Carrer</a></li>
+
+<li><a href="/p/privacy" data-lang="privacy_policy">Privacy Policy</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="copy">
+
+<div class="container">&copy; <span class="copyright-years">2023</span> MD.IO</div>
+
+</div>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>var __MD = $(document), __lang = {'en':{
+	'about':'About',
+	'all':'All',
+	'apps':'Apps',
+	'card':'Card',
+	'description':'Games and Apps Platform for your smart phone',
+	'description_footer':'MD.IO is a Platform who provide you awesome Free Games and Apps.',
+	'games':'Games',
+	'home':'Home',
+	'lang_code':'EN',
+	'privacy_policy':'Privacy Policy',
+	'puzzle':'Puzzle',
+	'search':'Search',
+	'site_title':'MD.IO : Games and Apps Platform for your smart phone',
+	'tools':'Tools',
+}}, __langDefault = 'en', langAvailable = ['de','en','es','fr','id','it','jp','kr','nl','pt','th'], categories = {'apps':[['tools','build']],'games':[['card','style'],['puzzle','extension']]}, __copyYears = 2023;
+__MD.ready(function(){
+	AX();
+	__MD.on('keyup keydown mouseup mousedown focus change', '.search-form input', function(){
+		var a = $(this).val();
+		if(a == ''){
+		  $('.inp-t').show();
+		} else {
+		  $('.inp-t').hide();
+		}
+	}).on('click', 'a.switch-lang', function(){
+		$('body').toggleClass('lang-open');
+	}).on('click', '.__navCatIt[data-catid]', function(){
+		var a = $(this).attr('data-catid'), b = a.replace(/^([a-z]{1})/m, function(c){
+			return c[0].toUpperCase();
+		});
+		$('body').toggleClass('__navCat'+b+'Open');
+	});
+});
+function AX(){
+	var a = ['icon_bubbleshooter', 'icon_jewelblockpuzzle', 'icon_tilematch'], c = '', d = 0, e = '', h = '', k = new Date().getFullYear(), n = [];
+	a.forEach(function(b){
+		c += '<div class="game-poster game-poster-'+d+'" style="background-image: url(/img/'+b+'.webp);"></div>';
+		d++;
+	});
+	$('.header-promotion').html(c);
+	langAvailable.forEach(function(f){
+		e += '<li><a class="fl fl-ca __lang-item"><img src="./assets/img/flag/'+f+'.png" /><span class="teX">'+f+'</span></a></li>';
+	});
+	$('.switch-lang').parent().append('<ul class="fl fl-dco __language">'+e+'</ul>');
+	h += '<li><a href="/#all" class="fl fl-ca __catAll">All</a></li>';
+	$('.__navCatIt[data-catid]').each(function(){
+		var l = $(this).attr('data-catid'), m = '<ul class="fl fl-dco __subcategory-list __subcategory-list-'+l+'">';
+		categories[l].forEach(function(o){
+			m += '<li><a href="#'+o[0]+'" class="fl fl-ca __subCatIt"><i class="material-icons-outlined">'+o[1]+'</i><span class="teX" data-lang="'+o[0]+'">'+o[0]+'</span></a></li>';
+		});
+		m += '</ul>';
+		$(this).parent().append(m);
+	});
+	categories['games'].forEach(function(g){
+		var j = g[0];
+		h += '<li><a href="#'+j+'" class="fl fl-ca __catIt"><i class="material-icons-outlined">'+g[1]+'</i><span class="teX">'+__lang[__langDefault][j]+'</span></a></li>';
+	});
+	categories['apps'].forEach(function(g){
+		var j = g[0];
+		h += '<li><a href="#'+j+'" class="fl fl-ca __catIt"><i class="material-icons-outlined">'+g[1]+'</i><span class="teX" data-lang="'+j+'">'+__lang[__langDefault][j]+'</span></a></li>';
+	});
+	$('.aside-categories').html('<ul class="fl fl-ca __category-list">'+h+'</ul>');
+	$('[data-lang]').each(function(){
+		var a = $(this).attr('data-lang');
+		$(this).text(__lang[__langDefault][a]);
+	});
+	if(k > __copyYears){
+		k = __copyYears+' - '+k;
+	}
+	$('.copyright-years').text(k);
+}</script>
+
+</body>
+
+</html>
