@@ -91,6 +91,9 @@ nav {
 .fl.fl-dco {
   flex-direction: column;
 }
+.fl.fl-wr {
+  flex-wrap: wrap;
+}
 nav a {
   color: #fff;
 }
@@ -263,4 +266,28 @@ header p {
 }
 .lang-open .switch-lang i.material-icons-outlined:last-of-type {
   transform: rotateX(180deg);
+}
+.apps {
+  gap: calc(var(--dp) * 3);
+  padding-top: calc(var(--dp) * 3);
+}
+.apps li {
+  width: calc(25% - var(--dp) * 9 / 4);
+  position: relative;
+}
+.app-iap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  background: var(--md1c);
+  line-height: 20px;
+  font-size: 14px;
+  gap: calc(var(--dp) / 3 * 2);
+  padding: calc(var(--dp) / 3) calc(var(--dp) / 3 * 2);
+}
+.app-iap-price-range {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

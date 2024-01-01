@@ -88,6 +88,12 @@
 
 </section>
 
+<section id="content">
+
+<aside class="aside-content"></aside>
+
+</section>
+
 </div>
 
 </main>
@@ -139,8 +145,18 @@
 	'all':'All',
 	'apps':'Apps',
 	'card':'Card',
+	'date_month':['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
 	'description':'Games and Apps Platform for your smart phone',
 	'description_footer':'MD.IO is a Platform who provide you awesome Free Games and Apps.',
+	'game_bubble':'Bubble Shooter',
+	'game_jewel':'Jewel Block Puzzle',
+	'game_ocean':'Ocean Block Puzzle - Legend',
+	'game_skibidi':'Skibidi Crush Block',
+	'game_solitaire':'Solitaire Spider Card',
+	'game_sort':'Water Sort Color',
+	'game_tank':'Real Tank Simulator 2D',
+	'game_tile':'Tile Match',
+	'game_wood':'Wood Block Puzzle',
 	'games':'Games',
 	'home':'Home',
 	'lang_code':'EN',
@@ -148,8 +164,19 @@
 	'puzzle':'Puzzle',
 	'search':'Search',
 	'site_title':'MD.IO : Games and Apps Platform for your smart phone',
+	'simulation':'Simulation',
 	'tools':'Tools',
-}}, __langDefault = 'en', langAvailable = ['de','en','es','fr','id','it','jp','kr','nl','pt','th'], categories = {'apps':[['tools','build']],'games':[['card','style'],['puzzle','extension']]}, __copyYears = 2023;
+}}, __langDefault = 'en', langAvailable = ['de','en','es','fr','id','it','jp','kr','nl','pt','th'], categories = {'apps':[['tools','build']],'games':[['card','style'],['puzzle','extension'],['simulation','flight_takeoff']]}, __copyYears = 2023, apps = [[
+	['bubble','game_bubble',[2023,3,30],'1.0.202304',[28000,1490000],'app.mddotzio.bubbleshooter.bubblebom','puzzle'],
+	['jewel','game_jewel',[2023,3,30],'1.0.202304',[16000,299000],'app.mddotzio.jewelblockpuzzle','puzzle'],
+	['ocean','game_ocean',[2023,7,13],'1.0.202308',[],'app.mddotzio.blockocean','puzzle'],
+	['skibidi','game_skibidi',[2023,7,6],'1.0.202308',[],'app.mddotzio.crushblock','puzzle'],
+	['solitaire','game_solitaire',[2023,4,24],'1.0.202305',[16000,699000],'app.mddotzio.solitaire.spiders','card'],
+	['sort','game_sort',[2023,6,5],'1.0.202306',[74000],'app.mddotzio.water.sort.boom','puzzle'],
+	['tank','game_tank',[2023,9,29],'1.0.202310',[29000,229000],'app.mddotzio.rts.tank2d','simulation'],
+	['tile','game_tile',[2023,4,6],'1.0.202305',[28000,149000],'app.mddotzio.tilematch.tileqq','puzzle'],
+	['wood','game_wood',[2023,5,10],'1.0.202306',[16000,299000],'app.mddotzio.wood.blockpuzzle','puzzle'],
+],[]];
 __MD.ready(function(){
 	AX();
 	__MD.on('keyup keydown mouseup mousedown focus change', '.search-form input', function(){
@@ -169,7 +196,7 @@ __MD.ready(function(){
 	});
 });
 function AX(){
-	var a = ['icon_bubbleshooter', 'icon_jewelblockpuzzle', 'icon_tilematch'], c = '', d = 0, e = '', h = '', k = new Date().getFullYear(), n = [];
+	var a = ['icon_bubbleshooter', 'icon_jewelblockpuzzle', 'icon_tilematch'], c = '', d = 0, e = '', h = '', k = new Date().getFullYear(), n = [], p = '';
 	a.forEach(function(b){
 		c += '<div class="game-poster game-poster-'+d+'" style="background-image: url(/img/'+b+'.webp);"></div>';
 		d++;
@@ -205,6 +232,25 @@ function AX(){
 		k = __copyYears+' - '+k;
 	}
 	$('.copyright-years').text(k);
+	apps.forEach(function(q){
+		if(q.length > 0){
+			q.forEach(function(r){
+				var s = r[1], t = __lang[__langDefault][s];
+				p += '<li class="fl fl-dco app-item" data-category="'+r[6]+'"><img src="./assets/img/ps/'+r[0]+'/i.png" /><div class="app-meta"><h3>'+t+'</h3>';
+				if(r[4].length == 2){
+					p += '<div class="fl fl-ca app-iap"><i class="material-icons-outlined">shopping_cart</i><span class="app-iap-price-range">Rp'+zTa(r[4][0])+'-'+zTa(r[4][1])+'</span></div>';
+				} else if(r[4].length == 1){
+					p += '<div class="fl fl-ca app-iap"><i class="material-icons-outlined">shopping_cart</i><span class="app-iap-price-range">Rp'+zTa(r[4][0])+'</span></div>';
+				}
+				p += '</div></li>';
+			});
+		}
+	});
+	$('.aside-content').html('<ul class="fl fl-wr apps">'+p+'</ul>');
+}
+function zTa(a){
+	var b = a.toLocaleString().toString().replace(/[,]/g, '.');
+	return b;
 }</script>
 
 </body>
