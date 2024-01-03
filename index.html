@@ -193,15 +193,16 @@ __MD.ready(function(){
 			return c[0].toUpperCase();
 		});
 		$('body').toggleClass('__navCat'+b+'Open');
+	}).on('click', 'a[href]', function(e){
+		var a = $(this).attr('href');
+		if(a.substring(0,1) == '#'){
+			e.preventDefault();
+			var b = a.match(/^#(apps|games)=([a-z0-9]+)$/m);
+		}
 	});
 });
 function AX(){
-	var a = ['icon_bubbleshooter', 'icon_jewelblockpuzzle', 'icon_tilematch'], c = '', d = 0, e = '', h = '', k = new Date().getFullYear(), n = [], p = '';
-	a.forEach(function(b){
-		c += '<div class="game-poster game-poster-'+d+'" style="background-image: url(/img/'+b+'.webp);"></div>';
-		d++;
-	});
-	$('.header-promotion').html(c);
+	var c = '', d = 0, e = '', h = '', k = new Date().getFullYear(), n = [], p = '', u = 0;
 	langAvailable.forEach(function(f){
 		e += '<li><a class="fl fl-ca __lang-item"><img src="./assets/img/flag/'+f+'.png" /><span class="teX">'+f+'</span></a></li>';
 	});
@@ -210,18 +211,23 @@ function AX(){
 	$('.__navCatIt[data-catid]').each(function(){
 		var l = $(this).attr('data-catid'), m = '<ul class="fl fl-dco __subcategory-list __subcategory-list-'+l+'">';
 		categories[l].forEach(function(o){
-			m += '<li><a href="#'+o[0]+'" class="fl fl-ca __subCatIt"><i class="material-icons-outlined">'+o[1]+'</i><span class="teX" data-lang="'+o[0]+'">'+o[0]+'</span></a></li>';
+		t = 'apps';
+		if(u == 1){
+			t = 'games';
+		}
+			m += '<li><a href="#'+t+'='+o[0]+'" class="fl fl-ca __subCatIt"><i class="material-icons-outlined">'+o[1]+'</i><span class="teX" data-lang="'+o[0]+'">'+o[0]+'</span></a></li>';
 		});
 		m += '</ul>';
 		$(this).parent().append(m);
+		u++;
 	});
 	categories['games'].forEach(function(g){
 		var j = g[0];
-		h += '<li><a href="#'+j+'" class="fl fl-ca __catIt"><i class="material-icons-outlined">'+g[1]+'</i><span class="teX">'+__lang[__langDefault][j]+'</span></a></li>';
+		h += '<li><a href="#games='+j+'" class="fl fl-ca __catIt"><i class="material-icons-outlined">'+g[1]+'</i><span class="teX">'+__lang[__langDefault][j]+'</span></a></li>';
 	});
 	categories['apps'].forEach(function(g){
 		var j = g[0];
-		h += '<li><a href="#'+j+'" class="fl fl-ca __catIt"><i class="material-icons-outlined">'+g[1]+'</i><span class="teX" data-lang="'+j+'">'+__lang[__langDefault][j]+'</span></a></li>';
+		h += '<li><a href="#apps='+j+'" class="fl fl-ca __catIt"><i class="material-icons-outlined">'+g[1]+'</i><span class="teX" data-lang="'+j+'">'+__lang[__langDefault][j]+'</span></a></li>';
 	});
 	$('.aside-categories').html('<ul class="fl fl-ca __category-list">'+h+'</ul>');
 	$('[data-lang]').each(function(){
@@ -243,10 +249,12 @@ function AX(){
 					p += '<div class="fl fl-ca app-iap"><i class="material-icons-outlined">shopping_cart</i><span class="app-iap-price-range">Rp'+zTa(r[4][0])+'</span></div>';
 				}
 				p += '</div></li>';
+				c += '<div class="game-poster game-poster-'+r[0]+'" style="background-image: url(/assets/img/ps/'+r[0]+'/i.png);"></div>';
 			});
 		}
 	});
 	$('.aside-content').html('<ul class="fl fl-wr apps">'+p+'</ul>');
+	$('.header-promotion').html(c);
 }
 function zTa(a){
 	var b = a.toLocaleString().toString().replace(/[,]/g, '.');

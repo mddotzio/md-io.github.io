@@ -291,3 +291,10 @@ header p {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+footer {
+  padding: calc(var(--dp) * 2) 0 0;
+}
+.copy {
+  text-align: center;
+  padding: calc(var(--dp) * 2) 0;
+}
